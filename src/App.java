@@ -5,7 +5,7 @@ import java.util.Locale;
 
 public class App {
     public static void main(String[] args) {
-        // Valor apenas didático; substitua pelo salário mínimo desejado.
+        
         double salarioMinimo = 1500.00;
         Vendedor vendedor = new Vendedor("Ana", "111.111.111-11", salarioMinimo, 50.00, 20);
         Consultor consultor = new Consultor("Bruno", "222.222.222-22", 80.00, 160);
@@ -18,7 +18,7 @@ public class App {
 
         System.out.println("FOLHA DE PAGAMENTO");
         for (Funcionario funcionario : funcionarios) {
-            // O Java escolhe a implementação da subclasse: polimorfismo.
+            
             System.out.printf(Locale.forLanguageTag("pt-BR"),
                     "Nome: %s | Tipo: %s | Salário: R$ %,.2f%n",
                     funcionario.getNome(), funcionario.getClass().getSimpleName(),
@@ -40,6 +40,6 @@ public class App {
                     ponto.getFuncionario().getNome(), ponto.getEntrada().format(formato),
                     ponto.getSaida().format(formato));
         }
-        // Não é necessário instanceof: nenhum comportamento aqui exige um tipo específico.
+        
     }
 }
